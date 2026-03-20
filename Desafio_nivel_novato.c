@@ -33,30 +33,28 @@ int main () {
     
 
     printf("digite o nome do estado (A-H): "); // Solicita ao usuário que insira o nome do 1° estado
-        fgets(estado, 50, stdin);
+        fgets(estado, 50, stdin); // Lê a entrada do usuário para o estado da 1° carta, armazenando-a na variável 'estado'
     estado[strcspn(estado, "\n")] = 0;
-
+    
     printf("digite o nome da cidade: "); // Solicita o nome da cidade para a 1° carta
-        fgets(nome_cidade, 100, stdin); // Lê a entrada do usuário para o nome da cidade
-    nome_cidade[strcspn(nome_cidade, "\n")] = 0; // Remove o caractere de nova linha do final da string, caso exista
+        fgets(nome_cidade, 100, stdin);
+    nome_cidade[strcspn(nome_cidade, "\n")] = 0;
     
     printf("digite o código da carta (ex: A01): "); // Solicita o código da carta para a 1° carta
         fgets(codigo_carta, 50, stdin);
     codigo_carta[strcspn(codigo_carta, "\n")] = 0;
 
     printf("digite a população da cidade:"); // Solicita a população da cidade para a 1° carta
-    scanf("%d", &populacao); // Lê a população como um número inteiro
+        scanf("%d", &populacao); // Lê a população como um número inteiro
 
     printf("digite o nùmero de pontos turísticos da cidade: "); // Solicita o número de pontos turísticos para a 1° carta
-    scanf("%d", &num_pontos_turisticos);
+        scanf("%d", &num_pontos_turisticos);
     
     printf("digite a área da cidade (em km²): "); // Solicita a área da cidade para a 1° carta
-    scanf("%f", &area);
+        scanf("%f", &area);
 
     printf("digite o PIB da cidade: "); // Solicita o PIB da cidade para a 1° carta
-    scanf("%f", &pib);
-
-    while(getchar() != '\n'); // Limpar o buffer do teclado após a leitura dos números
+        scanf("%f", &pib);
 
     printf("\n Informações da Carta 1:\n"); // Exibe as informações da primeira carta de forma organizada
     printf("este é o estado: %s\n", estado); // Imprime o estado da primeira carta
@@ -68,30 +66,31 @@ int main () {
     printf("este é o PIB: %.2f\n", pib); // Imprime o PIB da cidade da primeira carta, formatado com duas casas decimais
     
 //Mesmo processo para a segunda carta, solicitando as informações e exibindo-as de forma organizada
+    while(getchar() != '\n');
 
     printf("\n digite o nome do estado (A-H): ");
         fgets(estado2, 50, stdin);
-    estado2[strcspn(estado2, "\n")] = 0;
-
+    estado2[strcspn (estado2, "\n")] = 0;
+    
     printf("digite o nome da cidade: ");
         fgets(nome_cidade2, 100, stdin);
     nome_cidade2[strcspn(nome_cidade2, "\n")] = 0;
-    
+
     printf("digite o codigo da carta (ex: A01): ");
         fgets(codigo_carta2, 50, stdin);
     codigo_carta2[strcspn(codigo_carta2, "\n")] = 0;
 
     printf("digite a população da cidade: ");
-    scanf("%d", &populacao2);
+        scanf("%d", &populacao2);
     
     printf("digite o número de pontos turísticos da cidade: ");
-    scanf("%d", &num_pontos_turisticos2);
+        scanf("%d", &num_pontos_turisticos2);
     
     printf("digite a área da cidade (em km²): ");
-    scanf("%f", &area2);
+        scanf("%f", &area2);
 
     printf("digite o PIB da cidade: ");
-    scanf("%f", &pib2);
+        scanf("%f", &pib2);
 
     printf("\n Informações da Carta 2:\n");
     printf("este é o estado: %s\n", estado2);
