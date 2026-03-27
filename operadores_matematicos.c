@@ -3,6 +3,7 @@
 int main(){
     
     // Operações aritimeticas básicas
+    printf("Operadores Aritiméticos Básicos:\n");
     int a, b; // variáveis que armazenam valores inteiros 
     printf("digite o valor de a: "); // Solicita o valor de a ao usuário
     scanf("%d", &a);
@@ -18,6 +19,7 @@ int main(){
     printf("a / b = %d\n", a / b);
 
     // Operadores de atribuição
+    printf("Operadores de Atribuição:\n");
     int c;
     printf("digite o valor de c: "); //Solicita um valor a c ao usuário.
     scanf("%d", &c);
@@ -38,6 +40,7 @@ int main(){
     printf("c /= a = %d\n", c);
 
     // Incremento e Decremento
+    printf("Incremento e Decremento:\n");
     int d;
     printf("Digite o valor de d: ");
     scanf("%d", &d);
@@ -47,6 +50,32 @@ int main(){
     printf("d++ = %d\n", d);
     d--; // d passa a receber o valor de d -1.
     printf("d-- = %d\n", d);
+
+    //Manipulação e conversão de tipos
+    printf("Manipulação e Conversão de Tipos:\n");
+    // conversão inplicita: Ocorre quando o compilador converte automaticamente um tipo de dado para outro.
+    printf("Conversão Implícita:\n");
+    int e = 10;
+    float f = 5.5;
+    printf("e = %d\n", e);
+    printf("f = %f\n", f);
+
+    printf("e + f = %.2f\n", e + f);
+    printf("e - f = %.2f\n", e - f);
+    printf("e * f = %.2f\n", e * f);
+    printf("e / f = %.2f\n", e / f); // A operação por ser realizado entre um número inteiro e um numero de ponto flutuante, o resultao sái diferente, pois o número inteiro é convertido implicitamente para o tipo de dado float.
+
+    // conversão explícita: Ocorre quando o programador força a conversão de um tipo de dado para outro usando um operador de cast.
+    printf("Conversão Explícita:\n");
+    int g = 10;
+    float h = 5.5;
+    printf("g = %d\n", g);
+    printf("h = %f\n", h);
+
+    printf ("g + h = %.2f\n", (float)g + h);
+    printf ("g - h = %.2f\n", (float)g - h);
+    printf ("g * h = %.2f\n", (float)g * h);
+    printf ("g / h = %.2f\n", (float)g / h); // O operador de cast (float) é usado para converter explicitamente a variável g do tipo inteiro para o tipo float antes de realizar a operação com a variável h, que já é do tipo float. Isso garante que a operação seja realizada corretamente, considerando os tipos de dados envolvidos.
 
     return 0;
 
